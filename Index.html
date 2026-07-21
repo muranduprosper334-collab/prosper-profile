@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROSPER | Personal Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 20px 15px;
+            background-color: #f8f9fa;
+            color: #212529;
+        }
+
+        body.dark-mode {
+            background-color: #1a1a1a;
+            color: #f8f9fa;
+        }
+
+        .profile-card {
+            padding: 30px;
+            border-radius: 15px;
+            background-color: white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        body.dark-mode .profile-card {
+            background-color: #2d2d2d;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #25d366, #128c7e);
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            color: #25d366;
+            margin-bottom: 8px;
+        }
+
+        .title {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+
+        .bio-text {
+            line-height: 1.6;
+            margin-bottom: 25px;
+            padding: 0 10px;
+        }
+
+        .action-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .whatsapp-btn {
+            background-color: #25d366;
+            color: white;
+        }
+
+        .whatsapp-btn:hover {
+            background-color: #128c7e;
+        }
+
+        .email-btn {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .email-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .social-links {
+            margin-bottom: 25px;
+        }
+
+        .social-links a {
+            color: inherit;
+            font-size: 1.8rem;
+            margin: 0 10px;
+        }
+
+        .social-links a:hover {
+            color: #25d366;
+        }
+
+        .contact-section {
+            padding: 25px;
+            border-radius: 15px;
+            background-color: white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        body.dark-mode .contact-section {
+            background-color: #2d2d2d;
+        }
+
+        .contact-section h2 {
+            margin-bottom: 20px;
+            color: #25d366;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            background-color: #f8f9fa;
+            color: inherit;
+        }
+
+        body.dark-mode input, body.dark-mode textarea {
+            background-color: #3d3d3d;
+            border-color: #555;
+        }
+
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background-color: #25d366;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .submit-btn:hover {
+            background-color: #128c7e;
+        }
+
+        .mode-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: inherit;
+            border: 1px solid #ddd;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        body.dark-mode .mode-toggle {
+            border-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <button class="mode-toggle" id="modeToggle">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <div class="profile-card">
+        <div class="profile-img">PROSPER</div>
+        <h1>PROSPER</h1>
+        <p class="title">Digital Creator & Tech Enthusiast</p>
+        <p class="bio-text">
+            Passionate about building meaningful digital experiences and connecting with amazing people! 
+            Feel free to hit me up on WhatsApp to chat, collaborate, or just say hi – I'm always excited to meet new folks.
+        </p>
+
+        <div class="action-buttons">
+            <a href="https://wa.me/263773819570?text=Hi Prosper! I found your profile online and would love to connect 😊" 
+               class="btn whatsapp-btn" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+            </a>
+            <a href="mailto:muranduprosper334@gmail.com?subject=Hello from your profile" class="btn email-btn">
+                <i class="fas fa-envelope"></i> Send Email
+            </a>
+        </div>
+
+        <div class="social-links">
+            <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+            <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+            <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+        </div>
+    </div>
+
+    <div class="contact-section">
+        <h2><i class="fas fa-paper-plane"></i> Send Me a Message</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" placeholder="e.g., your-name@example.com" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Your Message</label>
+                <textarea id="message" placeholder="Type your message here... You can also reach me at muranduprosper334@gmail.com" required></textarea>
+            </div>
+            <button type="submit" class="btn submit-btn">
+                <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+        </form>
+    </div>
+
+    <script>
+        const modeToggle = document.getElementById('modeToggle');
+        const body = document.body;
+        const toggleIcon = modeToggle.querySelector('i');
+
+        modeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            if (body.classList.contains('dark-mode')) {
+                toggleIcon.classList.replace('fa-moon', 'fa-sun');
+            } else {
+                toggleIcon.classList.replace('fa-sun', 'fa-moon');
+            }
+        });
+
+        const contactForm = document.querySelector('form');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thanks for your message! I\'ll get back to you soon via email or WhatsApp 😊');
+            contactForm.reset();
+        });
+    </script>
+</body>
+</html>
